@@ -1,0 +1,46 @@
+.home-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px 0;
+
+  header {
+    max-width: 364px;
+    text-align: center;
+    h1 {
+      color: var(--primary-color);
+      font-size: 24px;
+    }
+
+    p {
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+  }
+
+  .img-section {
+    display: flex;
+    flex-direction: column;
+    .sparkle {
+      position: absolute;
+      margin-left: 14px;
+    }
+  }
+
+  button {
+    width: 90%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    padding: 14px;
+    cursor: pointer;
+    .arrow-right {
+      position: absolute;
+      margin-left: 14px;
+    }
+  }
+}

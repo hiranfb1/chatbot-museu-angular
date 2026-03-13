@@ -1,0 +1,30 @@
+<main class="chat-wrapper">
+  <header>
+    <button>
+      <icon-arrow-left></icon-arrow-left>
+    </button>
+    <icon-museum class="museum"></icon-museum>
+    <div class="status">
+      <p>Museu</p>
+      <span>• Online</span>
+    </div>
+  </header>
+  <section class="chat-content">
+    <chat-suggestions
+      (questionSelected)="sendNewMessage($event)"
+      *ngIf="messages.length < 1"
+    ></chat-suggestions>
+    <chat-dialog [messages]="messages"></chat-dialog>
+  </section>
+  <form [formGroup]="chatForm">
+    <input
+      type="text"
+      placeholder="Escreva sua mensagem aqui"
+      formControlName="message"
+      id="name"
+    />
+    <button (click)="submit()">
+      <icon-send></icon-send>
+    </button>
+  </form>
+</main>
